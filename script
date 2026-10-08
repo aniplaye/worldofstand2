@@ -1,0 +1,1572 @@
+-- ts file was generated at discord.gg/25ms
+
+repeat
+    wait()
+until game:IsLoaded()
+
+for _, v in pairs(getgc(true))do
+    if type(v) == 'table' then
+        if rawget(v, 'Remote') then
+            v.Remote.Name = v.Name
+        end
+    end
+end
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/XO-3S-CL-VCK-jf-3HDM/Utilities/main/Join-Discord.lua'))()
+loadstring(game:HttpGet('https://gist.github.com/XO-3S-CL-VCK-jf-3HDM/00852d6410206d2444704ec47fe4a3a5/raw'))()
+
+local _LocalPlayer = game:GetService('Players').LocalPlayer
+local _Name = game:GetService('MarketplaceService'):GetProductInfo(game.PlaceId).Name
+local _PlaceId = game.PlaceId
+local _TeleportService = game:GetService('TeleportService')
+local _Lighting = game:GetService('Lighting')
+local u = loadstring(game:HttpGet('https://gist.github.com/XO-3S-CL-VCK-jf-3HDM/35aab208f60cb7dce074922d01d0b304/raw'))()
+local _httpsgistgithubcomXO3SCLVCKjf3HDMbace8e4e90ca7c20914a78463bf0525araw = game:HttpGet('https://gist.github.com/XO-3S-CL-VCK-jf-3HDM/bace8e4e90ca7c20914a78463bf0525a/raw')
+local u1 = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
+local v1 = getrawmetatable(game)
+local ___newindex = v1.__newindex
+
+setreadonly(v1, false)
+
+v1.__newindex = newcclosure(function(p1, p2, ...)
+    if checkcaller() or p2 ~= 'WalkSpeed' and p2 ~= 'JumpPower' then
+        ___newindex(p1, p2, ...)
+
+        return
+    else
+        return
+    end
+end)
+
+setreadonly(v1, true)
+spawn(function()
+    pcall(function()
+        game:GetService('RunService').Stepped:Connect(function()
+            if _G.NOCLIP == true then
+                for _, v2 in pairs(game:GetService('Players').LocalPlayer.Character:GetDescendants())do
+                    if v2:IsA('BasePart') then
+                        v2.CanCollide = false
+                    end
+                end
+            end
+        end)
+    end)
+end)
+
+local _RunService = game:GetService('RunService')
+local _LocalPlayer2 = game:GetService('Players').LocalPlayer
+local u2 = 120
+local _Heartbeat = _RunService.Heartbeat
+local u3 = function(p3)
+    if typeof(p3) == 'Instance' and p3:IsA('BasePart') then
+        p3 = p3.Position
+    end
+    if typeof(p3) == 'CFrame' then
+        p3 = p3.p
+    end
+
+    local _Character = _LocalPlayer2.Character
+
+    if _Character then
+        _Character = _LocalPlayer2.Character:FindFirstChild('HumanoidRootPart')
+    end
+    if _Character then
+        local _Position = _Character.Position
+        local v3 = p3 - _Position
+        local v4 = tick()
+        local v5 = (_Position - p3).magnitude / u2
+
+        repeat
+            _Heartbeat:Wait()
+
+            local v6 = tick() - v4
+            local v7 = _Position + v3 * math.min(v6 / v5, 1)
+
+            _Character.Velocity = Vector3.new()
+            _Character.CFrame = CFrame.new(v7)
+        until (_Character.Position - p3).magnitude <= u2 / 2
+
+        _Character.Anchored = false
+        _Character.CFrame = CFrame.new(p3)
+
+        return
+    else
+        return
+    end
+end
+local v8 = function(p4)
+    u1:MakeNotification({
+        Name = 'Enhanced Software',
+        Content = p4,
+        Image = 'rbxassetid://12439607499',
+        Time = 10,
+    })
+end
+local v9 = u1
+
+u1.MakeNotification(v9, {
+    Name = 'Enhanced Software',
+    Content = 'Script supports only Synapse X and Krnl. Maybe more executors but your executor should support drawing ui.',
+    Image = 'rbxassetid://12439607499',
+    Time = 15,
+})
+
+local v10 = {
+    'Thug',
+    'Banks',
+    'Magical Bunny',
+    'Speedwagon Gang Member',
+    'Evil Vampire',
+    'Strong Thug',
+    'Slightly More Eviler Vampire',
+    'Capo',
+    'Mobster',
+    'Criminal',
+    'Corrupt Cop',
+    'Bruford',
+    'Tarkus',
+}
+local u4 = loadstring(game:HttpGet('https://gist.github.com/XO-3S-CL-VCK-jf-3HDM/c27d3fa9fc2f5e22f114d5a44937c7ae/raw'))()
+
+u4.teamSettings.enemy.enabled = false
+u4.teamSettings.friendly.enabled = false
+
+local u5 = function(p5, p6)
+    u4.teamSettings.enemy[p5] = p6
+    u4.teamSettings.friendly[p5] = p6
+end
+
+GetSubPrefix = function(p7)
+    local v11 = tostring(p7):gsub(' ', '')
+    local v12
+
+    if #v11 ~= 2 then
+        v12 = ''
+    else
+        local v13 = string.sub(v11, #v11, #v11 + 1)
+
+        v12 = v13 == '1' and 'st' or (v13 == '2' and 'nd' or (v13 == '3' and 'rd' or 'th'))
+    end
+
+    return v12
+end
+
+local _d = os.date(' %d', os.time())
+local v14 = os.date('%A, %B', os.time()) .. _d .. GetSubPrefix(_d) .. os.date(', %Y.', os.time())
+local v15 = function(p8)
+    return '\\\\ ' .. p8 .. ' //'
+end
+local u6 = loadstring(game:HttpGet('https://gist.github.com/XO-3S-CL-VCK-jf-3HDM/27669b644d594631085615aabb9cf295/raw'))()
+local v16 = u6:Load({
+    Name = '$$$ Valynium | World of Stands - ' .. tostring(v14),
+    SizeX = 600,
+    SizeY = 650,
+    Theme = 'Purple_Theme',
+    Extension = 'json',
+    Folder = 'Valynium',
+})
+local _SectionI = v16:Tab('Section I')
+local _SectionII = v16:Tab('Section II')
+local _ESP = v16:Tab('ESP')
+local v17 = _ESP:Section({
+    Name = v15('ESP Options'),
+    Side = 'Left',
+})
+local v18 = _ESP:Section({
+    Name = v15('ESP Color'),
+    Side = 'Right',
+})
+local v19 = _SectionI:Section({
+    Name = v15('Settings Farm'),
+    Side = 'Left',
+})
+local v20 = _SectionI:Section({
+    Name = v15('Main'),
+    Side = 'Left',
+})
+local v21 = _SectionI:Section({
+    Name = v15('Player Stuff'),
+    Side = 'Right',
+})
+local v22 = _SectionI:Section({
+    Name = v15('Players'),
+    Side = 'Right',
+})
+local v23 = _SectionI:Section({
+    Name = v15('Misc'),
+    Side = 'Right',
+})
+local v24 = _SectionI:Section({
+    Name = v15('Skills'),
+    Side = 'Left',
+})
+local v25 = _SectionII:Section({
+    Name = v15('Discord'),
+    Side = 'Left',
+})
+local v26 = _SectionII:Section({
+    Name = v15('Feedback'),
+    Side = 'Left',
+})
+local v27 = _SectionI:Section({
+    Name = v15('Teleports'),
+    Side = 'Right',
+})
+local v28 = _SectionII:Section({
+    Name = v15('Misc Options'),
+    Side = 'Right',
+})
+local v29 = _SectionII:Section({
+    Name = v15('Visual'),
+    Side = 'Right',
+})
+local v30 = _SectionII:Section({
+    Name = v15('Domains'),
+    Side = 'Left',
+})
+
+getgenv().Distance = 7
+getgenv().MethodFarm = 'Behind'
+
+v19:Dropdown({
+    Name = 'Select Method',
+    Default = 'Behind',
+    Content = {
+        'Behind',
+        'Below',
+        'Above',
+    },
+    Flag = false,
+    Callback = function(p9)
+        getgenv().MethodFarm = p9
+    end,
+})
+v19:Slider({
+    Name = 'Distance',
+    Text = '[value]/15',
+    Default = 7,
+    Min = 0,
+    Max = 15,
+    Float = 1,
+    Flag = false,
+    Callback = function(p10)
+        getgenv().Distance = p10
+    end,
+})
+
+PlayerList = {}
+
+for _, v31 in pairs(game:GetService('Players'):GetChildren())do
+    if v31 ~= game.Players.LocalPlayer then
+        table.insert(PlayerList, v31.Name)
+    end
+end
+
+local u7 = v22:Dropdown({
+    Name = 'Select Player',
+    Scrollable = true,
+    ScrollingMax = 7,
+    Content = PlayerList,
+    Flag = 'false',
+    Callback = function(p11)
+        _G.SelectName = p11
+    end,
+})
+
+v22:Button({
+    Name = 'Refresh Players',
+    Callback = function()
+        PlayerList = {}
+
+        for _, v32 in pairs(game:GetService('Players'):GetChildren())do
+            if v32 ~= game.Players.LocalPlayer then
+                table.insert(PlayerList, v32.Name)
+            end
+        end
+
+        u7:Refresh(PlayerList)
+    end,
+})
+v22:Button({
+    Name = 'Teleport to Player',
+    Callback = function()
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[_G.SelectName].Character.HumanoidRootPart.CFrame
+    end,
+})
+v22:Toggle({
+    Name = 'Spectate',
+    Flag = false,
+    Default = false,
+    Callback = function(p12)
+        _G.Spectate = p12
+
+        while _G.Spectate do
+            wait()
+            pcall(function()
+                for _, v33 in pairs(game.Players:GetPlayers())do
+                    if v33.Name == _G.SelectName then
+                        game.Workspace.Camera.CameraSubject = v33.Character.Humanoid
+                    end
+                end
+            end)
+        end
+
+        game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+    end,
+})
+v22:Toggle({
+    Name = 'Auto Farm Player',
+    Flag = false,
+    Default = false,
+    Callback = function(p13)
+        getgenv().FarmPlayers = p13
+
+        spawn(function()
+            while wait() do
+                pcall(function()
+                    if getgenv().FarmPlayers then
+                        for _, v34 in pairs(game:GetService('Workspace'):GetChildren())do
+                            if v34.Name == _G.SelectName then
+                                if v34.Humanoid.Health > 0 then
+                                    while true do
+                                        task.wait()
+
+                                        if getgenv().FarmPlayers == true then
+                                            if MethodFarm ~= 'Behind' then
+                                                if MethodFarm ~= 'Above' then
+                                                    if MethodFarm == 'Below' then
+                                                        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = v34:GetModelCFrame() * CFrame.new(0, -getgenv().Distance, 0) * CFrame.Angles(math.rad(90), 0, 0)
+                                                    end
+                                                else
+                                                    game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = v34:GetModelCFrame() * CFrame.new(0, getgenv().Distance, 0) * CFrame.Angles(math.rad(-90), 0, 0)
+                                                end
+                                            else
+                                                game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = v34:GetModelCFrame() * CFrame.new(0, 0, getgenv().Distance)
+                                            end
+                                        end
+                                        if not FarmPlayers then
+                                            break
+                                        end
+                                        if not v34.Parent then
+                                            break
+                                        end
+                                        if v34.Humanoid.Health <= 0 then
+                                            break
+                                        end
+                                        if not v34:IsDescendantOf(workspace) then
+                                            break
+                                        end
+                                    end
+                                end
+                            end
+                        end
+
+                        return
+                    else
+                        return
+                    end
+                end)
+            end
+        end)
+    end,
+})
+v21:Slider({
+    Name = 'Walk-Speed',
+    Text = '[value]/350',
+    Default = 30,
+    Min = 16,
+    Max = 350,
+    Float = 10,
+    Flag = false,
+    Callback = function(p14)
+        getgenv().WalkSpeedValue = p14
+    end,
+})
+v21:Toggle({
+    Name = 'WalkSpeed Enabled',
+    Flag = false,
+    Default = false,
+    Callback = function(p15)
+        getgenv().WalksSpeedEnabled = p15
+    end,
+})
+spawn(function()
+    while task.wait() do
+        if getgenv().WalksSpeedEnabled then
+            local _Character2 = game:GetService('Players').LocalPlayer.Character
+
+            if _Character2 then
+                _Character2 = game:GetService('Players').LocalPlayer.Character:WaitForChild('Humanoid').WalkSpeed
+            end
+            if _Character2 then
+                pcall(function()
+                    game:GetService('Players').LocalPlayer.Character:WaitForChild('Humanoid').WalkSpeed = getgenv().WalkSpeedValue or (_Character2 or 16)
+
+                    while task.wait() and getgenv().WalksSpeedEnabled do
+                        game:GetService('Players').LocalPlayer.Character:WaitForChild('Humanoid').WalkSpeed = getgenv().WalkSpeedValue or (_Character2 or 16)
+                    end
+                end)
+
+                game:GetService('Players').LocalPlayer.Character:WaitForChild('Humanoid').WalkSpeed = _Character2 or 16
+            end
+        end
+    end
+end)
+v21:Toggle({
+    Name = 'Noclip',
+    Flag = false,
+    Default = false,
+    Callback = function(p16)
+        _G.NOCLIP = p16
+    end,
+})
+v21:Toggle({
+    Name = 'Infinite Jumps',
+    Flag = false,
+    Default = false,
+    Callback = function(p17)
+        Infinite = p17
+
+        game:GetService('UserInputService').JumpRequest:connect(function()
+            if Infinite then
+                game:GetService('Players').LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):ChangeState('Jumping')
+            end
+        end)
+    end,
+})
+v20:Dropdown({
+    Name = 'Select Mob',
+    Scrollable = true,
+    ScrollingMax = 7,
+    Content = v10,
+    Flag = false,
+    Callback = function(p18)
+        _G.SelectedMob = p18
+    end,
+})
+v20:Toggle({
+    Name = 'Auto Farm Mob',
+    Flag = false,
+    Default = false,
+    Callback = function(p19)
+        getgenv().EnemiesAutoFarm = p19
+
+        spawn(function()
+            while wait() do
+                pcall(function()
+                    if getgenv().EnemiesAutoFarm then
+                        local _BodyVelocity = Instance.new('BodyVelocity', game:GetService('Players').LocalPlayer.Character.HumanoidRootPart)
+
+                        _BodyVelocity.Velocity = Vector3.new(0, 0, 0)
+                        _BodyVelocity.MaxForce = Vector3.new(9000000000, 9000000000, 9000000000)
+
+                        for _, v35 in pairs(game:GetService('Workspace'):GetChildren())do
+                            if v35.Name == _G.SelectedMob then
+                                if v35.Humanoid.Health > 0 then
+                                    while true do
+                                        task.wait()
+
+                                        if getgenv().EnemiesAutoFarm ~= true then
+                                            _BodyVelocity:Destroy()
+                                        elseif MethodFarm ~= 'Behind' then
+                                            if MethodFarm ~= 'Above' then
+                                                if MethodFarm == 'Below' then
+                                                    game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = v35:GetModelCFrame() * CFrame.new(0, -getgenv().Distance, 0) * CFrame.Angles(math.rad(90), 0, 0)
+                                                end
+                                            else
+                                                game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = v35:GetModelCFrame() * CFrame.new(0, getgenv().Distance, 0) * CFrame.Angles(math.rad(-90), 0, 0)
+                                            end
+                                        else
+                                            game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = v35:GetModelCFrame() * CFrame.new(0, 0, getgenv().Distance)
+                                        end
+                                        if not EnemiesAutoFarm then
+                                            break
+                                        end
+                                        if not v35.Parent then
+                                            break
+                                        end
+                                        if v35.Humanoid.Health <= 0 then
+                                            break
+                                        end
+                                        if not v35:IsDescendantOf(workspace) then
+                                            break
+                                        end
+                                    end
+                                end
+                            end
+                        end
+
+                        return
+                    else
+                        return
+                    end
+                end)
+            end
+        end)
+    end,
+})
+v20:Toggle({
+    Name = 'Auto Farm Chest',
+    Flag = false,
+    Default = false,
+    Callback = function(p20)
+        getgenv().ChestAutoFarmTween = p20
+
+        if getgenv().ChestAutoFarmTween == true then
+            u1:MakeNotification({
+                Name = 'Enhanced Software',
+                Content = 'If chest farm very much takes your fps then are no chests on the map.',
+                Image = 'rbxassetid://12439607499',
+                Time = 10,
+            })
+        end
+
+        wait(1.5)
+
+        while ChestAutoFarmTween do
+            task.wait(0.00001)
+
+            for _, v36 in pairs(game:GetService('Workspace'):GetDescendants())do
+                if v36.Name == 'Inside' then
+                    while true do
+                        u3(v36.CFrame * CFrame.new(0, 5, 0))
+                        wait(1)
+
+                        if (v36.Position - game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 15 and v36:FindFirstChild('ProximityPrompt') then
+                            fireproximityprompt(v36.ProximityPrompt, 1, true)
+                        end
+
+                        wait(1)
+
+                        if (v36.Position - game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5 then
+                            v36.Parent:Destroy()
+                        end
+                        if ChestAutoFarmTween == false then
+                            break
+                        end
+                        if not v36.Parent then
+                            break
+                        end
+                        if not v36:IsDescendantOf(workspace) then
+                            break
+                        end
+                    end
+                end
+            end
+        end
+    end,
+})
+v20:Toggle({
+    Name = 'Instant Interacts',
+    Flag = false,
+    Default = false,
+    Callback = function(p21)
+        getgenv().IntantInteract = p21
+
+        if getgenv().IntantInteract == true then
+            game:GetService('ProximityPromptService').PromptButtonHoldBegan:Connect(function(p22)
+                fireproximityprompt(p22)
+            end)
+        end
+    end,
+})
+v23:Button({
+    Name = 'Server Hop',
+    Callback = function()
+        u1:MakeNotification({
+            Name = 'Enhanced Software',
+            Content = 'Teleporting! Wait 1-10 seconds.',
+            Image = 'rbxassetid://12439607499',
+            Time = 10,
+        })
+        u:Teleport(game.PlaceId)
+    end,
+})
+v23:Button({
+    Name = 'Rejoin',
+    Callback = function()
+        u1:MakeNotification({
+            Name = 'Enhanced Software',
+            Content = 'Rejoining! Wait 1-10 seconds.',
+            Image = 'rbxassetid://12439607499',
+            Time = 10,
+        })
+        _TeleportService:Teleport(game.PlaceId, game:GetService('Players').LocalPlayer)
+    end,
+})
+v23:Button({
+    Name = 'Teleport to Hamon Island',
+    Callback = function()
+        u1:MakeNotification({
+            Name = 'Enhanced Software',
+            Content = 'Teleporting! Wait 1-10 seconds.',
+            Image = 'rbxassetid://12439607499',
+            Time = 10,
+        })
+        _TeleportService:Teleport(7555067289, game:GetService('Players').LocalPlayer)
+    end,
+})
+
+if _PlaceId ~= 6728870912 then
+    v23:Button({
+        Name = 'Teleport to Main Game',
+        Callback = function()
+            u1:MakeNotification({
+                Name = 'Enhanced Software',
+                Content = 'Teleporting! Wait 1-10 seconds.',
+                Image = 'rbxassetid://12439607499',
+                Time = 10,
+            })
+            _TeleportService:Teleport(6728870912, game:GetService('Players').LocalPlayer)
+        end,
+    })
+end
+
+v24:Toggle({
+    Name = 'Auto Use M1',
+    Flag = false,
+    Default = false,
+    Callback = function(p23)
+        getgenv().KeyM1 = p23
+
+        spawn(function()
+            while getgenv().KeyM1 do
+                wait()
+                game:GetService('ReplicatedStorage').Communication.Events.TryPunch:FireServer()
+            end
+        end)
+    end,
+})
+v24:Toggle({
+    Name = 'Auto Use M2',
+    Flag = false,
+    Default = false,
+    Callback = function(p24)
+        getgenv().KeyM2 = p24
+
+        spawn(function()
+            while getgenv().KeyM2 do
+                wait()
+
+                local v37 = {
+                    'Secondary',
+                    CFrame.new(285, 10, 194),
+                    Vector3.new(289, 7, 191),
+                }
+
+                game:GetService('ReplicatedStorage').Communication.Events.TryAttack:FireServer(unpack(v37))
+            end
+        end)
+    end,
+})
+v24:Toggle({
+    Name = 'Auto Use E',
+    Flag = false,
+    Default = false,
+    Callback = function(p25)
+        getgenv().KeyE = p25
+
+        spawn(function()
+            while getgenv().KeyE do
+                wait()
+
+                local v38 = {
+                    'Attack1',
+                    CFrame.new(-469, 10, 185),
+                    Vector3.new(-465, 7, 187),
+                }
+
+                game:GetService('ReplicatedStorage').Communication.Events.TryAttack:FireServer(unpack(v38))
+            end
+        end)
+    end,
+})
+v24:Toggle({
+    Name = 'Auto Use R',
+    Flag = false,
+    Default = false,
+    Callback = function(p26)
+        getgenv().KeyR = p26
+
+        spawn(function()
+            while getgenv().KeyR do
+                wait()
+
+                local v39 = {
+                    'Attack2',
+                    CFrame.new(315, 10, 211),
+                    Vector3.new(301, 7, 200),
+                }
+
+                game:GetService('ReplicatedStorage').Communication.Events.TryAttack:FireServer(unpack(v39))
+            end
+        end)
+    end,
+})
+v24:Toggle({
+    Name = 'Auto Use G',
+    Flag = false,
+    Default = false,
+    Callback = function(p27)
+        getgenv().KeyG = p27
+
+        spawn(function()
+            while getgenv().KeyG do
+                wait()
+
+                local v40 = {
+                    'Attack3',
+                    CFrame.new(348, 10, 220),
+                    Vector3.new(330, 7, 216),
+                }
+
+                game:GetService('ReplicatedStorage').Communication.Events.TryAttack:FireServer(unpack(v40))
+            end
+        end)
+    end,
+})
+v24:Toggle({
+    Name = 'Auto Use C',
+    Flag = false,
+    Default = false,
+    Callback = function(p28)
+        getgenv().KeyC = p28
+
+        spawn(function()
+            while getgenv().KeyC do
+                wait()
+
+                local v41 = {
+                    'Tech1',
+                    CFrame.new(353, 14, 208),
+                    Vector3.new(349, 14, 206),
+                }
+
+                game:GetService('ReplicatedStorage').Communication.Events.TryAttack:FireServer(unpack(v41))
+            end
+        end)
+    end,
+})
+v24:Toggle({
+    Name = 'Auto Use X',
+    Flag = false,
+    Default = false,
+    Callback = function(p29)
+        getgenv().KeyX = p29
+
+        spawn(function()
+            while getgenv().KeyX do
+                wait()
+
+                local v42 = {
+                    'Tech2',
+                    CFrame.new(364, 10, 205),
+                    Vector3.new(358, 9, 203),
+                }
+
+                game:GetService('ReplicatedStorage').Communication.Events.TryAttack:FireServer(unpack(v42))
+            end
+        end)
+    end,
+})
+v24:Toggle({
+    Name = 'Auto Use V',
+    Flag = false,
+    Default = false,
+    Callback = function(p30)
+        getgenv().KeyV = p30
+
+        spawn(function()
+            while getgenv().KeyV do
+                wait()
+
+                local v43 = {
+                    'Ultimate',
+                    CFrame.new(363, 10, 209),
+                    Vector3.new(366, 7, 208),
+                }
+
+                game:GetService('ReplicatedStorage').Communication.Events.TryAttack:FireServer(unpack(v43))
+            end
+        end)
+    end,
+})
+v24:Label('if it stopped working, just use reset')
+
+if game.PlaceId == 6728870912 then
+    local v44 = {}
+
+    for _, v45 in pairs(game:GetService('SoundService').InteractiveNPC.London:GetDescendants())do
+        if v45.ClassName == 'Part' then
+            table.insert(v44, v45.Name)
+        end
+    end
+
+    local v46 = {}
+
+    for _, v47 in pairs(game:GetService('SoundService').InteractiveNPC['New York']:GetDescendants())do
+        if v47.ClassName == 'Part' then
+            table.insert(v46, v47.Name)
+        end
+    end
+
+    v27:Dropdown({
+        Name = 'Select NPC [ London ]',
+        Scrollable = true,
+        ScrollingMax = 7,
+        Content = v44,
+        Flag = false,
+        Callback = function(p31)
+            _G.Selected_NPC_LDN = p31
+        end,
+    })
+    v27:Button({
+        Name = 'Teleport',
+        Callback = function()
+            game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('SoundService').InteractiveNPC.London[_G.Selected_NPC_LDN].CFrame
+        end,
+    })
+    v27:Dropdown({
+        Name = 'Select NPC [ New York ]',
+        Scrollable = true,
+        ScrollingMax = 7,
+        Content = v46,
+        Flag = false,
+        Callback = function(p32)
+            _G.Selected_NPC_York = p32
+        end,
+    })
+    v27:Button({
+        Name = 'Teleport',
+        Callback = function()
+            game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('SoundService').InteractiveNPC['New York'][_G.Selected_NPC_York].CFrame
+        end,
+    })
+end
+
+v17:Toggle({
+    Name = 'ESP Enabled',
+    Flag = false,
+    Default = false,
+    Callback = function(p33)
+        u4.teamSettings.enemy.enabled = p33
+    end,
+})
+v17:Toggle({
+    Name = 'Chests',
+    Flag = false,
+    Default = false,
+    Callback = function(p34)
+        for _, v48 in pairs(game:GetService('Workspace'):GetDescendants())do
+            if v48.Name == 'Base' then
+                u4.AddInstance(v48.Parent, {
+                    text = 'Chest {name}\n{distance} studs',
+                    textColor = {
+                        Color3.new(1, 1, 1),
+                        1,
+                    },
+                    textOutline = true,
+                    textOutlineColor = Color3.new(),
+                    textSize = 13,
+                    textFont = 2,
+                    limitDistance = false,
+                    maxDistance = 150,
+                }).options.enabled = p34
+            end
+        end
+    end,
+})
+v17:Toggle({
+    Name = 'Box',
+    Flag = false,
+    Default = true,
+    Callback = function(p35)
+        u5('box', p35)
+        u5('boxOutline', p35)
+    end,
+})
+v17:Toggle({
+    Name = 'Box Fill',
+    Flag = false,
+    Default = false,
+    Callback = function(p36)
+        u5('boxFill', p36)
+    end,
+})
+v17:Toggle({
+    Name = '3D Boxes',
+    Flag = false,
+    Default = false,
+    Callback = function(p37)
+        u5('box3d', p37)
+    end,
+})
+v17:Toggle({
+    Name = 'HealthBar',
+    Flag = false,
+    Default = true,
+    Callback = function(p38)
+        u5('healthBar', p38)
+        u5('healthBarOutline', p38)
+    end,
+})
+v17:Toggle({
+    Name = 'HealthText',
+    Flag = false,
+    Default = false,
+    Callback = function(p39)
+        u5('healthText', p39)
+        u5('healthOutline', p39)
+    end,
+})
+v17:Toggle({
+    Name = 'Name',
+    Flag = false,
+    Default = true,
+    Callback = function(p40)
+        u5('name', p40)
+        u5('nameOutline', p40)
+    end,
+})
+v17:Toggle({
+    Name = 'Distance',
+    Flag = false,
+    Default = true,
+    Callback = function(p41)
+        u5('distance', p41)
+        u5('distanceOutline', p41)
+    end,
+})
+v17:Toggle({
+    Name = 'Chams',
+    Flag = false,
+    Default = false,
+    Callback = function(p42)
+        u5('chams', p42)
+    end,
+})
+v18:ColorPicker({
+    Name = 'ESP Color',
+    Default = Color3.fromRGB(255, 255, 255),
+    Flag = false,
+    Callback = function(p43)
+        u4.teamSettings.enemy.boxColor = {p43, 1}
+        u4.teamSettings.enemy.box3dColor = {p43, 1}
+        u4.teamSettings.enemy.offScreenArrowColor = {p43, 1}
+        u4.teamSettings.enemy.tracerColor = {p43, 1}
+    end,
+})
+v18:ColorPicker({
+    Name = 'Box Fill Color',
+    Default = Color3.fromRGB(255, 255, 255),
+    Flag = false,
+    Callback = function(p44)
+        u4.teamSettings.enemy.boxFillColor = {p44, 0.5}
+    end,
+})
+v18:ColorPicker({
+    Name = 'Health Color',
+    Default = Color3.fromRGB(0, 255, 0),
+    Flag = false,
+    Callback = function(p45)
+        u5('healthyColor', p45)
+    end,
+})
+v18:ColorPicker({
+    Name = 'Dying Color',
+    Default = Color3.fromRGB(255, 0, 0),
+    Flag = false,
+    Callback = function(p46)
+        u5('dyingColor', p46)
+    end,
+})
+v18:ColorPicker({
+    Name = 'Chams Fill Color',
+    Default = Color3.fromRGB(0, 130, 255),
+    Flag = false,
+    Callback = function(p47)
+        u4.teamSettings.enemy.chamsFillColor = {p47, 0.3}
+    end,
+})
+v18:ColorPicker({
+    Name = 'Chams Outline Color',
+    Default = Color3.fromRGB(255, 255, 255),
+    Flag = false,
+    Callback = function(p48)
+        u4.teamSettings.enemy.chamsOutlineColor = {p48, 0}
+    end,
+})
+v25:Label('Developer: TweedLeak#4003')
+v25:Button({
+    Name = 'Join to Discord',
+    Callback = function()
+        (http_request or (request or (HttpPost or (syn.request or (syn.request or (fluxus.request or http.request))))))({
+            Url = 'http://127.0.0.1:6463/rpc?v=1',
+            Method = 'POST',
+            Headers = {
+                ['Content-Type'] = 'application/json',
+                Origin = 'https://discord.com',
+            },
+            Body = game:GetService('HttpService'):JSONEncode({
+                cmd = 'INVITE_BROWSER',
+                nonce = game:GetService('HttpService'):GenerateGUID(false),
+                args = {
+                    code = 'CtKnhbnJa4',
+                },
+            }),
+        })
+    end,
+})
+v26:Box({
+    Name = 'Feedback',
+    Placeholder = 'Feedback Here',
+    Flag = false,
+    Callback = function(p49)
+        _G.Feedback = p49
+    end,
+})
+
+_G.Feedback = nil
+
+v26:Button({
+    Name = 'Send Feedback',
+    Callback = function()
+        if _G.Feedback ~= nil then
+            local v49 = _httpsgistgithubcomXO3SCLVCKjf3HDMbace8e4e90ca7c20914a78463bf0525araw
+            local v50 = {
+                content = '',
+                embeds = {
+                    {
+                        title = '**' .. game.Players.LocalPlayer.Name .. ' | Wrote a feedback | ' .. _Name .. ' | ' .. identifyexecutor() .. '**',
+                        description = '**```' .. _G.Feedback .. '```**',
+                        type = 'rich',
+                        color = tonumber(16711937),
+                    },
+                },
+            }
+            local v51 = game:GetService('HttpService'):JSONEncode(v50)
+
+            request = http_request or (request or (HttpPost or syn.request))
+
+            request({
+                Url = v49,
+                Body = v51,
+                Method = 'POST',
+                Headers = {
+                    ['content-type'] = 'application/json',
+                },
+            })
+            u1:MakeNotification({
+                Name = 'Enhanced Software',
+                Content = 'Feedback has been sent.',
+                Image = 'rbxassetid://12439607499',
+                Time = 10,
+            })
+        else
+            u1:MakeNotification({
+                Name = 'Enhanced Software',
+                Content = 'Incorrectly! Write something.',
+                Image = 'rbxassetid://12439607499',
+                Time = 10,
+            })
+        end
+    end,
+})
+
+if _PlaceId == 7555067289 then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-449, 5, -246)
+
+    local v52 = {}
+
+    for _, v53 in pairs(game:GetService('Workspace'):GetDescendants())do
+        if v53.ClassName == 'Model' then
+            if v53:FindFirstChild('Shirt') then
+                if v53:FindFirstChild('Pants') then
+                    if v53:FindFirstChild('Animate') then
+                        if v53:FindFirstChild('Alive') then
+                            if v53:FindFirstChild('HumanoidRootPart') then
+                                if not table.find(v52, v53.Name) then
+                                    table.insert(v52, v53.Name)
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    local u8 = v30:Dropdown({
+        Name = 'Select Mob',
+        Scrollable = true,
+        ScrollingMax = 7,
+        Content = v52,
+        Flag = false,
+        Callback = function(p50)
+            _G.SelectedMobDio = p50
+        end,
+    })
+
+    v30:Button({
+        Name = 'Refresh Mobs',
+        Callback = function()
+            local v54 = {}
+
+            for _, v55 in pairs(game:GetService('Workspace'):GetDescendants())do
+                if v55.ClassName == 'Model' then
+                    if v55:FindFirstChild('Shirt') then
+                        if v55:FindFirstChild('Pants') then
+                            if v55:FindFirstChild('Animate') then
+                                if v55:FindFirstChild('Alive') then
+                                    if v55:FindFirstChild('HumanoidRootPart') then
+                                        if not table.find(v54, v55.Name) then
+                                            table.insert(v54, v55.Name)
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+
+            u8:Refresh(v54)
+        end,
+    })
+    v30:Toggle({
+        Name = 'Auto Farm Mob',
+        Flag = false,
+        Default = false,
+        Callback = function(p51)
+            getgenv().DioMobsTggle = p51
+
+            spawn(function()
+                while wait() do
+                    pcall(function()
+                        if getgenv().DioMobsTggle then
+                            local _BodyVelocity2 = Instance.new('BodyVelocity', game:GetService('Players').LocalPlayer.Character.HumanoidRootPart)
+
+                            _BodyVelocity2.Velocity = Vector3.new(0, 0, 0)
+                            _BodyVelocity2.MaxForce = Vector3.new(9000000000, 9000000000, 9000000000)
+
+                            for _, v56 in pairs(game:GetService('Workspace'):GetChildren())do
+                                if v56.Name == _G.SelectedMobDio then
+                                    if v56.Humanoid.Health > 0 then
+                                        while true do
+                                            task.wait()
+
+                                            if getgenv().DioMobsTggle ~= true then
+                                                _BodyVelocity2:Destroy()
+                                            elseif MethodFarm ~= 'Behind' then
+                                                if MethodFarm ~= 'Above' then
+                                                    if MethodFarm == 'Below' then
+                                                        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = v56:GetModelCFrame() * CFrame.new(0, -getgenv().Distance, 0) * CFrame.Angles(math.rad(90), 0, 0)
+                                                    end
+                                                else
+                                                    game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = v56:GetModelCFrame() * CFrame.new(0, getgenv().Distance, 0) * CFrame.Angles(math.rad(-90), 0, 0)
+                                                end
+                                            else
+                                                game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = v56:GetModelCFrame() * CFrame.new(0, 0, getgenv().Distance)
+                                            end
+                                            if not DioMobsTggle then
+                                                break
+                                            end
+                                            if not v56.Parent then
+                                                break
+                                            end
+                                            if v56.Humanoid.Health <= 0 then
+                                                break
+                                            end
+                                            if not v56:IsDescendantOf(workspace) then
+                                                break
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+
+                            return
+                        else
+                            return
+                        end
+                    end)
+                end
+            end)
+        end,
+    })
+    v30:Label('In dropdown mobs please ignore')
+    v30:Label('your name or players name')
+else
+    v30:Label('You need to be in Domains')
+    v30:Label('and then the buttons will appear here.')
+end
+
+v28:Toggle({
+    Name = 'Anti AFK',
+    Flag = false,
+    Default = true,
+    Callback = function()
+        game:GetService('Players').LocalPlayer.Idled:connect(function()
+            game:GetService('VirtualUser'):ClickButton2(Vector2.new())
+        end)
+    end,
+})
+v28:Toggle({
+    Name = 'Rejoin If Kick',
+    Flag = false,
+    Default = true,
+    Callback = function(p52)
+        getgenv().JustValue = p52
+
+        if getgenv().JustValue == true then
+            getgenv().rejoin = game:GetService('CoreGui').RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(p53)
+                if p53.Name == 'ErrorPrompt' and p53:FindFirstChild('MessageArea') and p53.MessageArea:FindFirstChild('ErrorFrame') then
+                    _TeleportService:Teleport(_PlaceId, _LocalPlayer)
+                end
+            end)
+        end
+    end,
+})
+v29:Toggle({
+    Name = 'Depth Of Field',
+    Flag = false,
+    Default = false,
+    Callback = function(p54)
+        _Lighting.DepthOfField.Enabled = p54
+    end,
+})
+v29:Slider({
+    Name = 'Depth Of Field Radius',
+    Text = '[value]/1000',
+    Default = 150,
+    Min = 10,
+    Max = 1000,
+    Float = 1,
+    Flag = false,
+    Callback = function(p55)
+        _Lighting.DepthOfField.InFocusRadius = p55
+    end,
+})
+v29:Slider({
+    Name = 'Brightness',
+    Text = '[value]/10',
+    Default = 3,
+    Min = 1,
+    Max = 10,
+    Float = 1,
+    Flag = false,
+    Callback = function(p56)
+        _Lighting.Brightness = p56
+    end,
+})
+v29:Slider({
+    Name = 'Time Of Day',
+    Text = '[value]/24',
+    Default = 10,
+    Min = 1,
+    Max = 24,
+    Float = 1,
+    Flag = false,
+    Callback = function(p57)
+        _Lighting.TimeOfDay = p57
+    end,
+})
+v29:Seperator('Sky')
+v29:Button({
+    Name = 'Blox Fruit Sky',
+    Callback = function()
+        s = Instance.new('Sky')
+        s.Name = 'Enhanced Software 1'
+        s.SkyboxBk = 'http://www.roblox.com/asset/?id=479712644'
+        s.SkyboxDn = 'http://www.roblox.com/asset/?id=479712702'
+        s.SkyboxFt = 'http://www.roblox.com/asset/?id=479712776'
+        s.SkyboxLf = 'http://www.roblox.com/asset/?id=479712892'
+        s.SkyboxRt = 'http://www.roblox.com/asset/?id=479713047'
+        s.SkyboxUp = 'http://www.roblox.com/asset/?id=479713195'
+        s.Parent = game.Lighting
+    end,
+})
+v29:Button({
+    Name = 'Realistic Sky',
+    Callback = function()
+        s = Instance.new('Sky')
+        s.Name = 'Enhanced Software 2'
+        s.SkyboxBk = 'http://www.roblox.com/asset/?id=144933338'
+        s.SkyboxDn = 'http://www.roblox.com/asset/?id=144931530'
+        s.SkyboxFt = 'http://www.roblox.com/asset/?id=144933262'
+        s.SkyboxLf = 'http://www.roblox.com/asset/?id=144933244'
+        s.SkyboxRt = 'http://www.roblox.com/asset/?id=144933299'
+        s.SkyboxUp = 'http://www.roblox.com/asset/?id=144931564'
+        s.Parent = game.Lighting
+    end,
+})
+v29:Button({
+    Name = 'Afternoon Sky',
+    Callback = function()
+        local _Lighting2 = game:GetService('Lighting')
+        local _StarterGui = game:GetService('StarterGui')
+        local _BloomEffect = Instance.new('BloomEffect')
+        local _BlurEffect = Instance.new('BlurEffect')
+        local _ColorCorrectionEffect = Instance.new('ColorCorrectionEffect')
+        local _SunRaysEffect = Instance.new('SunRaysEffect')
+        local _Sky = Instance.new('Sky')
+        local _Atmosphere = Instance.new('Atmosphere')
+        local v57 = true
+
+        for _, v58 in pairs(_Lighting2:GetChildren())do
+            if v58 then
+                v58:Destroy()
+            end
+        end
+
+        _BloomEffect.Parent = _Lighting2
+        _BlurEffect.Parent = _Lighting2
+        _ColorCorrectionEffect.Parent = _Lighting2
+        _SunRaysEffect.Parent = _Lighting2
+        _Sky.Parent = _Lighting2
+        _Atmosphere.Parent = _Lighting2
+
+        if v57 == true then
+            local _ScreenGui = Instance.new('ScreenGui')
+
+            _ScreenGui.Parent = _StarterGui
+            _ScreenGui.IgnoreGuiInset = true
+
+            local _ImageLabel = Instance.new('ImageLabel')
+
+            _ImageLabel.Parent = _ScreenGui
+            _ImageLabel.AnchorPoint = Vector2.new(0.5, 1)
+            _ImageLabel.Position = UDim2.new(0.5, 0, 1, 0)
+            _ImageLabel.Size = UDim2.new(1, 0, 1.05, 0)
+            _ImageLabel.BackgroundTransparency = 1
+            _ImageLabel.Image = 'rbxassetid://4576475446'
+            _ImageLabel.ImageTransparency = 0.3
+            _ImageLabel.ZIndex = 10
+        end
+
+        _BloomEffect.Intensity = 0.3
+        _BloomEffect.Size = 10
+        _BloomEffect.Threshold = 0.8
+        _BlurEffect.Size = 5
+        _ColorCorrectionEffect.Brightness = 0.1
+        _ColorCorrectionEffect.Contrast = 0.5
+        _ColorCorrectionEffect.Saturation = -0.3
+        _ColorCorrectionEffect.TintColor = Color3.fromRGB(242, 243, 243)
+        _SunRaysEffect.Enabled = true
+        _SunRaysEffect.Intensity = 0.075
+        _SunRaysEffect.Spread = 0.727
+        _Sky.SkyboxBk = 'http://www.roblox.com/asset/?id=225469345'
+        _Sky.SkyboxDn = 'http://www.roblox.com/asset/?id=225469349'
+        _Sky.SkyboxFt = 'http://www.roblox.com/asset/?id=225469359'
+        _Sky.SkyboxLf = 'http://www.roblox.com/asset/?id=225469364'
+        _Sky.SkyboxRt = 'http://www.roblox.com/asset/?id=225469372'
+        _Sky.SkyboxUp = 'http://www.roblox.com/asset/?id=225469380'
+        _Sky.SunAngularSize = 10
+        _Lighting2.Ambient = Color3.fromRGB(33, 33, 33)
+        _Lighting2.Brightness = 2.25
+        _Lighting2.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
+        _Lighting2.ColorShift_Top = Color3.fromRGB(255, 247, 237)
+        _Lighting2.EnvironmentDiffuseScale = 0.203
+        _Lighting2.EnvironmentSpecularScale = 0.255
+        _Lighting2.GlobalShadows = true
+        _Lighting2.OutdoorAmbient = Color3.fromRGB(51, 54, 67)
+        _Lighting2.ShadowSoftness = 0.19
+        _Lighting2.ClockTime = 10
+        _Lighting2.GeographicLatitude = -15.12
+        _Lighting2.ExposureCompensation = 0.85
+        _Atmosphere.Density = 0.364
+        _Atmosphere.Offset = 0.556
+        _Atmosphere.Color = Color3.fromR
+
+        GB(175, 221, 255)
+
+        _Atmosphere.Decay = Color3.fromRGB(13, 105, 172)
+        _Atmosphere.Glare = 0.36
+        _Atmosphere.Haze = 1.72
+    end,
+})
+v29:Button({
+    Name = 'Evening Sky',
+    Callback = function()
+        local _Lighting3 = game:GetService('Lighting')
+        local _StarterGui2 = game:GetService('StarterGui')
+        local _BloomEffect2 = Instance.new('BloomEffect')
+        local _BlurEffect2 = Instance.new('BlurEffect')
+        local _ColorCorrectionEffect2 = Instance.new('ColorCorrectionEffect')
+        local _SunRaysEffect2 = Instance.new('SunRaysEffect')
+        local _Sky2 = Instance.new('Sky')
+        local _Atmosphere2 = Instance.new('Atmosphere')
+        local v59 = true
+
+        for _, v60 in pairs(_Lighting3:GetChildren())do
+            if v60 then
+                v60:Destroy()
+            end
+        end
+
+        _BloomEffect2.Parent = _Lighting3
+        _BlurEffect2.Parent = _Lighting3
+        _ColorCorrectionEffect2.Parent = _Lighting3
+        _SunRaysEffect2.Parent = _Lighting3
+        _Sky2.Parent = _Lighting3
+        _Atmosphere2.Parent = _Lighting3
+
+        if v59 == true then
+            local _ScreenGui2 = Instance.new('ScreenGui')
+
+            _ScreenGui2.Parent = _StarterGui2
+            _ScreenGui2.IgnoreGuiInset = true
+
+            local _ImageLabel2 = Instance.new('ImageLabel')
+
+            _ImageLabel2.Parent = _ScreenGui2
+            _ImageLabel2.AnchorPoint = Vector2.new(0.5, 1)
+            _ImageLabel2.Position = UDim2.new(0.5, 0, 1, 0)
+            _ImageLabel2.Size = UDim2.new(1, 0, 1.05, 0)
+            _ImageLabel2.BackgroundTransparency = 1
+            _ImageLabel2.Image = 'rbxassetid://4576475446'
+            _ImageLabel2.ImageTransparency = 0.3
+            _ImageLabel2.ZIndex = 10
+        end
+
+        _BloomEffect2.Intensity = 0.3
+        _BloomEffect2.Size = 10
+        _BloomEffect2.Threshold = 0.8
+        _BlurEffect2.Size = 5
+        _ColorCorrectionEffect2.Brightness = 0.1
+        _ColorCorrectionEffect2.Contrast = 0.5
+        _ColorCorrectionEffect2.Saturation = -0.3
+        _ColorCorrectionEffect2.TintColor = Color3.fromRGB(255, 235, 203)
+        _SunRaysEffect2.Intensity = 0.075
+        _SunRaysEffect2.Spread = 0.727
+        _Sky2.SkyboxBk = 'http://www.roblox.com/asset/?id=151165214'
+        _Sky2.SkyboxDn = 'http://www.roblox.com/asset/?id=151165197'
+        _Sky2.SkyboxFt = 'http://www.roblox.com/asset/?id=151165224'
+        _Sky2.SkyboxLf = 'http://www.roblox.com/asset/?id=151165191'
+        _Sky2.SkyboxRt = 'http://www.roblox.com/asset/?id=151165206'
+        _Sky2.SkyboxUp = 'http://www.roblox.com/asset/?id=151165227'
+        _Sky2.SunAngularSize = 10
+        _Lighting3.Ambient = Color3.fromRGB(2, 2, 2)
+        _Lighting3.Brightness = 2.25
+        _Lighting3.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
+        _Lighting3.ColorShift_Top = Color3.fromRGB(255, 247, 237)
+        _Lighting3.EnvironmentDiffuseScale = 0.2
+        _Lighting3.EnvironmentSpecularScale = 0.2
+        _Lighting3.GlobalShadows = true
+        _Lighting3.OutdoorAmbient = Color3.fromRGB(0, 0, 0)
+        _Lighting3.ShadowSoftness = 0.2
+        _Lighting3.ClockTime = 17
+        _Lighting3.GeographicLatitude = 45
+        _Lighting3.ExposureCompensation = 0.5
+        _Atmosphere2.Density = 0.364
+        _Atmosphere2.Offset = 0.556
+        _Atmosphere2.Color = Color3.fromRGB(199, 175, 166)
+        _Atmosphere2.Decay = Color3.fromRGB(44, 39, 33)
+        _Atmosphere2.Glare = 0.36
+        _Atmosphere2.Haze = 1.72
+    end,
+})
+v29:Button({
+    Name = 'Pink Sky',
+    Callback = function()
+        s = Instance.new('Sky')
+        s.Name = 'Enhanced Software 3'
+        s.SkyboxBk = 'http://www.roblox.com/asset/?id=271042516'
+        s.SkyboxDn = 'http://www.roblox.com/asset/?id=271077243'
+        s.SkyboxFt = 'http://www.roblox.com/asset/?id=271042556'
+        s.SkyboxLf = 'http://www.roblox.com/asset/?id=271042310'
+        s.SkyboxRt = 'http://www.roblox.com/asset/?id=271042467'
+        s.SkyboxUp = 'http://www.roblox.com/asset/?id=271077958'
+        s.Parent = game.Lighting
+    end,
+})
+v29:Button({
+    Name = 'Purple Sky',
+    Callback = function()
+        s = Instance.new('Sky')
+        s.Name = 'Enhanced Software 4'
+        s.SkyboxBk = 'http://www.roblox.com/asset/?id=570557514'
+        s.SkyboxDn = 'http://www.roblox.com/asset/?id=570557775'
+        s.SkyboxFt = 'http://www.roblox.com/asset/?id=570557559'
+        s.SkyboxLf = 'http://www.roblox.com/asset/?id=570557620'
+        s.SkyboxRt = 'http://www.roblox.com/asset/?id=570557672'
+        s.SkyboxUp = 'http://www.roblox.com/asset/?id=570557727'
+        s.Parent = game.Lighting
+    end,
+})
+v29:Button({
+    Name = 'Black Sky',
+    Callback = function()
+        s = Instance.new('Sky')
+        s.Name = 'Enhanced Software 5'
+        s.SkyboxBk = 'http://www.roblox.com/asset/?id=154185004'
+        s.SkyboxDn = 'http://www.roblox.com/asset/?id=154184960'
+        s.SkyboxFt = 'http://www.roblox.com/asset/?id=154185021'
+        s.SkyboxLf = 'http://www.roblox.com/asset/?id=154184943'
+        s.SkyboxRt = 'http://www.roblox.com/asset/?id=154184972'
+        s.SkyboxUp = 'http://www.roblox.com/asset/?id=154185031'
+        s.Parent = game.Lighting
+    end,
+})
+
+local _Configuration = v16:Tab('Configuration')
+local v61 = _Configuration:Section({
+    Name = 'Theme',
+    Side = 'Left',
+})
+local u9 = {}
+local _Dropdown = v61.Dropdown
+local v62 = {
+    Name = 'Theme',
+    Default = u6.currenttheme,
+}
+local v63 = u6
+
+v62.Content = u6.GetThemes(v63)
+v62.Flag = 'Theme Dropdown'
+v62.Callback = function(p58)
+    if p58 then
+        u6:SetTheme(p58)
+
+        for v64, v65 in next, u9 do
+            v65:Set(u6.theme[v64])
+        end
+    end
+end
+
+local u10 = _Dropdown(v61, v62)
+local v66 = u6
+
+u6.ConfigIgnore(v66, 'Theme Dropdown')
+
+local u11 = v61:Box({
+    Name = 'Custom Theme Name',
+    Placeholder = 'Custom Theme',
+    Flag = 'Custom Theme',
+})
+local v67 = u6
+
+u6.ConfigIgnore(v67, 'Custom Theme')
+v61:Button({
+    Name = 'Save Custom Theme',
+    Callback = function()
+        if u6:SaveCustomTheme(u6.flags['Custom Theme']) then
+            u10:Refresh(u6:GetThemes())
+            u10:Set(u6.flags['Custom Theme'])
+            u11:Set('')
+        end
+    end,
+})
+
+local v68 = _Configuration:Section({
+    Name = 'Custom Theme',
+    Side = 'Right',
+})
+
+u9.Accent = v68:ColorPicker({
+    Name = 'Accent',
+    Default = u6.theme.Accent,
+    Flag = 'Accent',
+    Callback = function(p59)
+        u6:ChangeThemeOption('Accent', p59)
+    end,... (6 KB left)
